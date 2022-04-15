@@ -119,14 +119,9 @@ LNode* GetElem(LinkList L, int i) {
 //按值查找
 LNode* LocateElem(LinkList L, int e) {
 	LNode* p;
-	int j = 0;
-	p = L;
-	while (p != NULL) {
-		if (p->data != e)
-			p = p->next;
-		else
-			return p;
-	}
+	p = L->next;
+	while (p != NULL && p->data != e )
+		p = p->next;
 	return p;
 }
 //求表长
@@ -199,7 +194,7 @@ void main() {
 	//else
 	//	printf("插入失败！\n");
 	//InsertNextNode(GetElem(L, 1),2);
-	//InsertPriorNode(GetElem(L, 2), 3);
+	//InsertPriorNode(LocateElem(L, 2), 3);
 	//ListDelete(&L, 4);
 	//DeleteNode(GetElem(L, 4));
 	LNode* p;
