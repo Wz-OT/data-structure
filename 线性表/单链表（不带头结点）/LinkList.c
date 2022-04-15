@@ -100,7 +100,7 @@ int ListDelete(LinkList* L, int i) {
 	free(q);
 	return e;
 }
-//删除指定节点
+//删除指定结点
 bool DeleteNode(LNode* p) {
 	if (p == NULL)
 		return false;
