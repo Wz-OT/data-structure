@@ -48,7 +48,7 @@ bool ListInsert(LinkList* L, int i,int e) {
 	p->next = s;
 	return true;
 }
-//指定节点的后插操作
+//指定结点的后插操作
 bool InsertNextNode(LNode* p, int e) {
 	if (p == NULL)
 		return false;
@@ -60,7 +60,7 @@ bool InsertNextNode(LNode* p, int e) {
 	p->next = s;
 	return true;
 }
-//指定节点的前插操作
+//指定结点的前插操作
 bool InsertPriorNode(LNode* p, int e) {
 	if (p == NULL)
 		return false;
@@ -93,7 +93,7 @@ int ListDelete(LinkList* L, int i) {
 	free(q);
 	return e;
 }
-//指定节点的删除(无法删除最后一个元素)
+//指定结点的删除(无法删除最后一个元素)
 bool DeleteNode(LNode* p) {
 	if (p == NULL)
 		return false;
