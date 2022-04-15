@@ -63,10 +63,8 @@ bool IncreaseSize(SeqList* L, int len) {
 	L->data = (int*)malloc((L->MaxSize + len) * sizeof(int));
 	if (L->data == NULL)
 		return false;
-	int i = 0;
-	while (i < L->length) {
+	for (int i = 0; i < L->length, i++) {
 		L->data[i] = p[i];
-		i++;
 	}
 	L->MaxSize += len;
 	free(p);
