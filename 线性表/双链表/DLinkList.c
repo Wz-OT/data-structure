@@ -10,10 +10,9 @@ typedef struct DNode {
 }DNode,*DLinkList;
 //初始化
 bool InitDLinkList(DLinkList* L) {
-	(*L) = (DLinkList)malloc(sizeof(DLinkList));
+	(*L) = (DNode*)malloc(sizeof(DNode));
 	if ((*L) == NULL)
 		return false;
-	(*L)->data = 123;
 	(*L)->prior = NULL;
 	(*L)->next = NULL;
 	return true;
@@ -118,6 +117,8 @@ bool DeleteNextNode(DNode* p) {
 void DestoryList(DLinkList* L) {
 	while ((*L)->next != NULL)
 		DeleteNextNode((*L));
+	free((*L));
+	(*L) = NULL;
 }
 void main() {
 	DLinkList L;
@@ -130,16 +131,16 @@ void main() {
 		printf("插入成功！\n");
 	else
 		printf("插入失败！\n");
-	if(InsertNextNode(GetElem(L,1),CreateNode(2)))
-		printf("插入成功！\n");
-	else
-		printf("插入失败！\n");
-	if(InsertPriorNode(LocateElem(L,1),CreateNode(3)))
-		printf("插入成功！\n");
-	else
-		printf("插入失败\n");
-	if (DeleteNextNode(L))
-		printf("删除成功！\n");
+	//if(InsertNextNode(GetElem(L,1),CreateNode(2)))
+	//	printf("插入成功！\n");
+	//else
+	//	printf("插入失败！\n");
+	//if(InsertPriorNode(LocateElem(L,1),CreateNode(3)))
+	//	printf("插入成功！\n");
+	//else
+	//	printf("插入失败\n");
+	//if (DeleteNextNode(L))
+	//	printf("删除成功！\n");
 	DLinkList p;
 	p = L->next;
 	while (p != NULL) {
