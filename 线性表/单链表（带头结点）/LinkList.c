@@ -38,7 +38,7 @@ bool ListInsert(LinkList* L, int i,int e) {
 		p = p->next;
 		j++;
 	}
-	while (p == NULL)
+	if (p == NULL)
 		return false;
 	LNode* s = (LNode*)malloc(sizeof(LNode));
 	if (s == NULL)
@@ -85,7 +85,7 @@ int ListDelete(LinkList* L, int i) {
 		p = p->next;
 		j++;
 	}
-	while (p == NULL || p->next == NULL)
+	if (p == NULL || p->next == NULL)
 		return 0;
 	LNode* q = p->next;
 	p->next = q->next;
