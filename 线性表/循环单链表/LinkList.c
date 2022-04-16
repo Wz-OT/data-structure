@@ -128,6 +128,8 @@ LNode* LocateElem(LinkList L, int e) {
 	while (p != L->next && p->data != e) {
 			p = p->next;
 	}
+	if (p != L->next)
+		return p;
 	return NULL;
 }
 //删除指定节点的下一个结点
