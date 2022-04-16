@@ -118,7 +118,8 @@ LNode* GetElem(LinkList L, int i) {
 	}
 	if (j == i)
 		return p;
-	return p;
+	else 
+		return NULL;
 }
 //按值查找
 LNode* LocateElem(LinkList L, int e) {
