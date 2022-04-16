@@ -138,7 +138,7 @@ int length(LinkList L) {
 //尾插法建立单链表
 bool Insert_Tail(LinkList *L) {
 	int x;
-	(*L) = (LinkList)malloc(sizeof(LinkList));
+	(*L) = (LinkList)malloc(sizeof(LNode));
 	if ((*L) == NULL)
 		return false;
 	LNode* s, * r;		//r为尾结点
@@ -161,7 +161,7 @@ bool Insert_Tail(LinkList *L) {
 //头插法建立单链表
 bool Insert_Head(LinkList* L) {
 	int x;
-	(*L) = (LinkList)malloc(sizeof(LinkList));
+	(*L) = (LinkList)malloc(sizeof(LNode));
 	if ((*L) == NULL)
 		return false;
 	(*L)->next = NULL;
