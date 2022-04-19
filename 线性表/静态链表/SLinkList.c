@@ -63,7 +63,7 @@ int GetElem(SLinkList L, int i) {
 	if (j < i)
 		return 9999;
 	if (cursor == 0)
-		return false;
+		return 9999;
 	return L[cursor].data;
 }
 //按值查找
