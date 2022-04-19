@@ -66,9 +66,9 @@ void main() {
 	ShStack S;
 	InitStack(&S);
 	if (Empty(S))
-		printf("此顺序栈为空！\n");
+		printf("此共享栈为空！\n");
 	else
-		printf("此顺序栈非空！\n");
+		printf("此共享栈非空！\n");
 	if (Push0(&S, 3))
 		printf("进栈0成功！\n");
 	else
