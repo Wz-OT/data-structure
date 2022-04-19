@@ -23,7 +23,7 @@ bool InitQueue(SeqQueue* Q) {
 }
 //判空
 bool Empty(SeqQueue Q) {
-	if (Q.front == Q.rear)
+	if (Q.size == 0)
 		return true;
 	else
 		return false;
