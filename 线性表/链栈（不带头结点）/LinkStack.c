@@ -36,6 +36,8 @@ bool Push(LinkStack* S, int e) {
 }
 //出栈
 int Pop(LinkStack* S) {
+	if (Empty((*S)))
+		return 9999;
 	LinkStack p;
 	p = (*S);
 	(*S) = (*S)->next;
