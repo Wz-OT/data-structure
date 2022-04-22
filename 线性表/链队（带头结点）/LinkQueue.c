@@ -53,6 +53,7 @@ int DeQueue(LinkQueue* Q) {
 	if (Q->rear == p) {
 		Q->rear = Q->front;
 	}
+	free(p);
 	return e;
 }
 void main() {
