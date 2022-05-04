@@ -50,7 +50,7 @@ int Compare(char ch1, char ch2) {
 		i = 1;
 	if (ch2 == '*' || ch2 == '/')
 		j = 1;
-	if (ch1 == '(')
+	if (ch1 == '(' || ch2 == '(')
 		return -1;
 	return i - j;
 }
