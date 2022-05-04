@@ -1,3 +1,6 @@
+/*
+*求阶乘
+*/
 #include <stdio.h>
 int Factorial(int n) {
 	if (n == 0 || n == 1)
