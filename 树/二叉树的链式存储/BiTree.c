@@ -180,7 +180,7 @@ void PostOrder(BiTree T) {
 		printf("%d", T->data);
 	}
 }
-//后序遍历（非递归）
+//后序遍历（非递归）①
 void PostOrder1(BiTree T) {
 	SeqStack S;
 	InitStack(&S);
@@ -204,6 +204,28 @@ void PostOrder1(BiTree T) {
 			}
 		}
 	}
+}
+//后序遍历（非递归）②
+void PostOrder2(BiTree T) {
+	SeqStack S;
+	SeqStack S1;
+	InitStack(&S);
+	InitStack(&S1);
+	BiTNode* p;
+	p = T;
+	while (p != NULL || !SEmpty(S)) {
+		if (p != NULL) {
+			Push(&S1, p);
+			Push(&S, p);
+			p = p->rchild;
+		}
+		else {
+			p = Pop(&S);
+			p = p->lchild;
+		}
+	}
+	while (!SEmpty(S1))
+		printf("%d", Pop(&S1)->data);
 }
 //层次遍历
 void LevelOrder(BiTree T) {
