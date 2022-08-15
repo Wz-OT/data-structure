@@ -39,7 +39,7 @@ char Pop(SeqStack* S) {
 //查看栈顶元素
 char GetTopElem(SeqStack S) {
 	if (S.top == -1)
-		return ‘？’;
+		return '?';
 	return S.data[S.top];
 }
 //优先级比较
